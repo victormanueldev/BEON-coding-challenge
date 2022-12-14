@@ -8,4 +8,8 @@ export class PersonsService {
     async create(person: any) {
         await PersonsModel.create(person)
     }
+
+    async getById(id: string) {
+        return await PersonsModel.findOne({ id });
+    }
 }
